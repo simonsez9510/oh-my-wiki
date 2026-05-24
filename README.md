@@ -1,4 +1,4 @@
-# won-vault-bootstrap
+# Oh My Wiki
 
 > **빈 옵시디언 vault를 5분 만에 LLM Wiki 시드로 부트스트랩하는 Claude Code 플러그인.**
 > 직무 한 번 묻고 폴더·일관성카드·페르소나 properties·1차/2차 빌드까지 자동 실행.
@@ -11,7 +11,7 @@
 
 ## 한 줄 소개
 
-**원성묵 원장 선명회계법인 강의(2026-05-21) IP**를 Claude Code 플러그인으로 패키징했습니다. 강의 정점 50분 흐름(빈 vault → 폴더 셋업 → 일관성 카드 → 1차 빌드 → 2차 빌드)을 **5분**으로 압축합니다.
+**2026년 상반기 한 회계법인 강의 IP**를 Claude Code 플러그인으로 패키징했습니다. 강의 정점 50분 흐름(빈 vault → 폴더 셋업 → 일관성 카드 → 1차 빌드 → 2차 빌드)을 **5분**으로 압축합니다.
 
 ## 누구를 위한 것인가
 
@@ -40,8 +40,8 @@
 Claude Code 안에서:
 
 ```
-/plugin marketplace add simonsez9510/won-vault-bootstrap
-/plugin install won-vault-bootstrap@won-vault-bootstrap
+/plugin marketplace add simonsez9510/oh-my-wiki
+/plugin install oh-my-wiki@oh-my-wiki
 ```
 
 ## 사용
@@ -49,15 +49,15 @@ Claude Code 안에서:
 빈 vault 만들고 옵시디언에 등록 (`Open folder as vault`)한 뒤:
 
 ```
-/won-vault-bootstrap:bootstrap
+/oh-my-wiki:bootstrap
 ```
 
 또는 자연어로:
 
 ```
-"vault 부트스트랩 실행해줘"
+"oh my wiki 실행해줘"
+"vault 부트스트랩 실행"
 "지식관리시스템 셋업"
-"won-vault-bootstrap 실행"
 ```
 
 스킬이 차례로 묻고 진행합니다:
@@ -110,7 +110,7 @@ L1은 반드시 작동, L2는 옵시디언 CLI 토글 ON일 때 추가 자동화
 ## 디렉토리 구조
 
 ```
-won-vault-bootstrap/
+oh-my-wiki/
 ├── .claude-plugin/
 │   ├── plugin.json
 │   └── marketplace.json
@@ -133,14 +133,14 @@ won-vault-bootstrap/
 
 ## English Summary
 
-**won-vault-bootstrap** is a Claude Code plugin that bootstraps an empty Obsidian vault into an LLM Wiki seed in 5 minutes. Built from Won Seongmuk's lecture IP at Sunmyung Accounting Firm (2026-05-21). Supports 4 personas (Accountant, Lawyer, Journalist, Researcher) with a unified 4-axis properties standard (time, who, topic, kind). Requires Obsidian 1.12.7+ installer (with CLI enabled) and Claude Code. Optional integration with kepano/obsidian-skills for deeper 1st/2nd build operations.
+**Oh My Wiki** is a Claude Code plugin that bootstraps an empty Obsidian vault into an LLM Wiki seed in 5 minutes. Built from Won Seongmuk's lecture IP delivered at a Korean accounting firm in the first half of 2026. Supports 4 personas (Accountant, Lawyer, Journalist, Researcher) with a unified 4-axis properties standard (time, who, topic, kind). Requires Obsidian 1.12.7+ installer (with CLI enabled) and Claude Code. Optional integration with kepano/obsidian-skills for deeper 1st/2nd build operations.
 
 ```
-/plugin marketplace add simonsez9510/won-vault-bootstrap
-/plugin install won-vault-bootstrap@won-vault-bootstrap
+/plugin marketplace add simonsez9510/oh-my-wiki
+/plugin install oh-my-wiki@oh-my-wiki
 ```
 
-Then call `/won-vault-bootstrap:bootstrap` in your empty vault. The plugin will ask for your persona once, then auto-create folders, install the consistency card, set up persona properties, run 1st build (raw → wiki notes), and apply the 5-rule consistency card in 2nd build.
+Then call `/oh-my-wiki:bootstrap` in your empty vault. The plugin will ask for your persona once, then auto-create folders, install the consistency card, set up persona properties, run 1st build (raw → wiki notes), and apply the 5-rule consistency card in 2nd build.
 
 ## 라이선스
 
@@ -151,16 +151,15 @@ MIT License — 자세한 내용은 [LICENSE](LICENSE) 참조.
 - **개발·집필**: 원성묵 (元 性 黙) · 지방자치혁신연구원 원장 · [won.seongmuk@gmail.com](mailto:won.seongmuk@gmail.com)
 - **개념 원전**: Andrej Karpathy의 [LLM Wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — write-time compilation 패턴
 - **5스킬 본가**: Steph Ango([@kepano](https://github.com/kepano))의 [obsidian-skills](https://github.com/kepano/obsidian-skills) — 옵시디언 CEO가 직접 만든 LLM 도구 풀세트
-- **강의 모태**: 선명회계법인 AX 실전 아카데미 (2026-05-21)
+- **강의 모태**: 2026년 상반기 한 회계법인 AX 실전 아카데미
 
 ## 관련 자료
 
-- [원성묵 강의안 (한국어)](https://github.com/simonsez9510/won-vault-bootstrap/blob/main/docs/lecture-handout.md) (추후 추가 예정)
 - [지방자치혁신연구원](https://jachinews.kr)
 
 ## 변경 이력
 
-- **v1.0.0** (2026-05-24) — PoC E2E 검증 후 첫 공개 릴리즈
+- **v1.0.0** (2026-05) — PoC E2E 검증 후 첫 공개 릴리즈
 
 ---
 

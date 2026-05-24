@@ -1,5 +1,5 @@
 {
-  "name": "won-vault-bootstrap",
+  "name": "oh-my-wiki",
   "owner": {
     "name": "원성묵 (Seongmuk Won)",
     "email": "won.seongmuk@gmail.com",
@@ -7,9 +7,9 @@
   },
   "plugins": [
     {
-      "name": "won-vault-bootstrap",
+      "name": "oh-my-wiki",
       "source": "./",
-      "description": "빈 옵시디언 vault에 LLM Wiki 시드를 자동 구축. 회계사·변호사·매체운영자·연구자 4종 페르소나 지원.",
+      "description": "빈 옵시디언 vault를 5분 만에 LLM Wiki 시드로 부트스트랩. 회계사·변호사·매체운영자·연구자 4종 페르소나 지원.",
       "version": "1.0.0"
     }
   ]

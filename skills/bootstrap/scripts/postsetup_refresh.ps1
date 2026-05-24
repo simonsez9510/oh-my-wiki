@@ -1,4 +1,4 @@
-# won-vault-bootstrap · L2 vault 리프레시 + 그래프뷰 trigger
+# oh-my-wiki · L2 vault 리프레시 + 그래프뷰 trigger
 # Usage: .\postsetup_refresh.ps1 -VaultName "_PoC_빈vault" -KeyNote "_meta/일관성카드.md"
 #
 # 주의: 옵시디언 CLI는 vault= 옵션이 일부 명령(open 등)과 파서 충돌함.
@@ -45,6 +45,6 @@ Write-Output "[4/5] 핵심 노트 열기 — $KeyNote"
 Write-Output "[5/5] 그래프뷰 열기"
 & $obs command id=graph:open 2>&1
 
-Write-Output "OK · won-vault-bootstrap 셋업 완료"
+Write-Output "OK · oh-my-wiki 셋업 완료"
 Write-Output "→ 옵시디언 GUI에서 일관성카드 + 그래프뷰 자동 열림 확인하세요"
 exit 0

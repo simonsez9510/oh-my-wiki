@@ -1,4 +1,4 @@
-# won-vault-bootstrap · L2 헬스체크
+# oh-my-wiki · L2 헬스체크
 # Obsidian.com 리다이렉터 존재 + CLI 토글 ON 확인
 # Exit codes: 0=OK, 1=binary missing, 2=CLI toggle OFF, 3=other
 

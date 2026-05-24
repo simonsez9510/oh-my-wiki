@@ -1,6 +1,6 @@
 # demo/ — 회계사 페르소나 데모 vault
 
-이 폴더 전체를 옵시디언 vault로 등록하면 won-vault-bootstrap 스킬을 *바로* 시연할 수 있습니다.
+이 폴더 전체를 옵시디언 vault로 등록하면 Oh My Wiki 스킬을 *바로* 시연할 수 있습니다.
 
 ## 사용법
 
@@ -8,7 +8,7 @@
 2. Claude Code 실행 (이 디렉토리 또는 부모 디렉토리에서)
 3. Claude Code 안에서:
    ```
-   /won-vault-bootstrap:bootstrap
+   /oh-my-wiki:bootstrap
    ```
 4. 직무 묻는 단계에서 **"회계사"** 선택
 5. raw/ 폴더의 3개 자료가 1차 빌드 거쳐 위키 노트로 변환됨

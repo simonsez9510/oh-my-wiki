@@ -1,11 +1,11 @@
 ---
 name: bootstrap
-description: 빈 옵시디언 vault에 LLM Wiki 시드 자동 구축. 직무 한 번 묻고 폴더·일관성카드·페르소나 properties·1차/2차 빌드 자동 실행. kepano 5스킬 + 옵시디언 CLI 본체(1.12.7+) 의존. 트리거 — "vault 부트스트랩", "지식관리시스템 셋업", "옵시디언 빈 vault 시작", "won-vault-bootstrap".
+description: 빈 옵시디언 vault에 LLM Wiki 시드 자동 구축. 직무 한 번 묻고 폴더·일관성카드·페르소나 properties·1차/2차 빌드 자동 실행. kepano 5스킬 + 옵시디언 CLI 본체(1.12.7+) 의존. 트리거 — "oh my wiki", "vault 부트스트랩", "지식관리시스템 셋업", "옵시디언 빈 vault 시작".
 ---
 
-# won-vault-bootstrap
+# Oh My Wiki — bootstrap
 
-원성묵 원장 선명회계법인 강의(2026-05-21) 정점 50분 흐름을 한 명령으로 재현합니다.
+원성묵 원장 2026년 상반기 한 회계법인 강의 정점 50분 흐름을 한 명령으로 재현합니다.
 
 ## 의존성
 
@@ -109,7 +109,7 @@ obsidian vault=<vault-name> create path=_meta/페르소나.md content="<persona 
 
 ## 옵시디언 CLI 명령 cheatsheet (이 스킬이 호출하는 것)
 
-> **중요 — `vault=<name>` 옵션 제한사항** (PoC 2026-05-24 발견)
+> **중요 — `vault=<name>` 옵션 제한사항** (PoC 검증에서 발견)
 >
 > `vault=` 옵션은 조회 명령(`files`·`folders`·`vault info=...`)에만 안전.
 > *액션 명령*(`open`·`command`·`create` 등)과 결합하면 파서가 "Command not found" 응답.
@@ -148,6 +148,5 @@ obsidian vault=<vault-name> create path=_meta/페르소나.md content="<persona 
 
 ---
 
-*v1.0 (2026-05-24) · 원성묵 원장 선명회계법인 강의(2026-05-21) IP 패키지 · PoC E2E 검증 후 글로벌 릴리즈.*
-*PoC 검증 vault: `Desktop/집필실/강의/선명회계법인_옵시디언강의/_PoC_빈vault/`*
-*PoC 회고: `_PoC_빈vault/_meta/PoC_회고_2026-05-24.md`*
+*v1.0 (2026-05) · 원성묵 원장 2026년 상반기 한 회계법인 강의 IP 패키지 · PoC E2E 검증 후 공개 릴리즈.*
+*GitHub: https://github.com/simonsez9510/oh-my-wiki*

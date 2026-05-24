@@ -1,0 +1,26 @@
+{
+  "name": "won-vault-bootstrap",
+  "version": "1.0.0",
+  "description": "빈 옵시디언 vault에 LLM Wiki 시드를 자동 구축. 직무(회계사·변호사·매체운영자·연구자) 한 번 묻고 폴더·일관성카드·페르소나 properties·1차/2차 빌드까지 자동 실행. 원성묵 원장 선명회계법인 강의(2026-05-21) IP 패키지.",
+  "author": {
+    "name": "원성묵 (Seongmuk Won)",
+    "email": "won.seongmuk@gmail.com",
+    "url": "https://github.com/simonsez9510"
+  },
+  "repository": "https://github.com/simonsez9510/won-vault-bootstrap",
+  "license": "MIT",
+  "keywords": [
+    "obsidian",
+    "llm-wiki",
+    "knowledge-management",
+    "second-brain",
+    "pkm",
+    "vault-bootstrap",
+    "kepano",
+    "korean",
+    "accounting",
+    "law",
+    "journalism",
+    "research"
+  ]
+}

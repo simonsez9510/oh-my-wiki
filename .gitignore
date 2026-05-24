@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local Obsidian state (사용자 개별)
+.obsidian/workspace*.json
+.obsidian/cache
+.obsidian/types.json
+
+# Local test artifacts
+*.local.md
+_test_*/

@@ -1,0 +1,16 @@
+{
+  "name": "won-vault-bootstrap",
+  "owner": {
+    "name": "원성묵 (Seongmuk Won)",
+    "email": "won.seongmuk@gmail.com",
+    "url": "https://github.com/simonsez9510"
+  },
+  "plugins": [
+    {
+      "name": "won-vault-bootstrap",
+      "source": "./",
+      "description": "빈 옵시디언 vault에 LLM Wiki 시드를 자동 구축. 회계사·변호사·매체운영자·연구자 4종 페르소나 지원.",
+      "version": "1.0.0"
+    }
+  ]
+}

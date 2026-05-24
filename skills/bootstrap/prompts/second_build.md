@@ -55,12 +55,15 @@
 2) 내가 표를 본 뒤 "진행"이라고 답하면 그때 각 노트에 변경을 적용.
    일괄 적용 전에 멈춰.
 
-3) 적용 시 옵시디언 CLI 활용:
-   ```
-   obsidian rename path=<old> name=<new>
-   obsidian property:set name=<key> value=<val> path=<file>
-   obsidian append path=<file> content=<first-line-summary>
-   ```
+3) 적용 시 변경 종류별 분업:
+   - **메타데이터 조작은 옵시디언 CLI** (짧은 한 줄, 한국어 escape 안전):
+     ```
+     obsidian rename path=<old> name=<new>
+     obsidian property:set name=<key> value=<val> path=<file>
+     obsidian append path=<file> content=<first-line-summary>
+     ```
+   - **본문 통째 재구성·frontmatter 신규 추가·"참고:" 섹션 정리는 파일시스템 직접**.
+     CLI `append`·`create`로 멀티라인 한국어 박는 건 escape 함정 — 파일시스템 권장.
 
 4) 적용 후 그래프뷰 변화가 어디에서 일어났는지 한 줄로 요약.
    (어떤 노드가 새 링크를 받았는지, 고립 노드가 줄었는지)
@@ -70,6 +73,8 @@
    obsidian reload
    obsidian command id=graph:open
    ```
+   `graph:open`이 `Command "command" not found. It may require a plugin to be enabled.`
+   응답하면 1~2초 후 한 번 더 호출 (graph plugin 로드 지연 함정).
 
 == 보호 규칙 ==
 

@@ -51,9 +51,12 @@
 - `raw/` 폴더 원본은 *절대* 수정 X
 - `_meta/일관성카드.md`는 *절대* 수정 X
 - 본문 숫자·고유명사 임의 변경 X
-- 노트 한 장 만들 때마다 옵시디언 CLI 호출:
+- **노트 생성은 파일시스템 직접** (PowerShell / shell write 도구 / LLM 호스트의 Write 등).
+  옵시디언 CLI `create name=... path=... content=...` 명령은 한국어 멀티라인
+  frontmatter + 본문의 escape(`\n`·따옴표·yaml)가 까다로워 권장 안 함.
+  파일시스템 박은 후 vault 인덱싱:
   ```
-  obsidian create name="<제목>" path="<폴더>/<제목>.md" content="<frontmatter + 본문>"
+  obsidian reload
   ```
 
 == 완료 보고 ==
@@ -61,5 +64,6 @@
 작업 끝나면 다음 한 컷:
 - 생성된 노트 개수 (사례 N개 + 기준 M개)
 - 폴더별 분포
-- `_meta/1차빌드_보고.md` 파일로도 같은 표 박아줘
+- `_meta/1차빌드_보고.md` 파일로도 같은 표 박아줘 (파일시스템 직접)
+- 마지막에 `obsidian reload` 한 번 호출하고, 1~2초 후 `obsidian open path=_meta/1차빌드_보고.md` (file index sync 지연 시 한 번 더 reload)
 - 다음 단계 안내 한 줄: "2차 빌드 진행하시려면 '진행' 입력"

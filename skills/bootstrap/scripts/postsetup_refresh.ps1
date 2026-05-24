@@ -40,10 +40,25 @@ Write-Output "[3/5] vault 리로드"
 & $obs reload 2>&1
 
 Write-Output "[4/5] 핵심 노트 열기 — $KeyNote"
-& $obs open path=$KeyNote 2>&1
+$openResult = (& $obs open path=$KeyNote 2>&1 | Out-String).Trim()
+if ($openResult -match "not found|File not found") {
+    Write-Output "  · 첫 시도 실패 (file index sync 지연 추정), 1.5초 후 재시도"
+    Start-Sleep -Milliseconds 1500
+    & $obs reload 2>&1 | Out-Null
+    & $obs open path=$KeyNote 2>&1
+} else {
+    Write-Output $openResult
+}
 
 Write-Output "[5/5] 그래프뷰 열기"
-& $obs command id=graph:open 2>&1
+$graphResult = (& $obs command id=graph:open 2>&1 | Out-String).Trim()
+if ($graphResult -match "not found|not enabled") {
+    Write-Output "  · 첫 시도 실패 (graph plugin 로드 지연 추정), 1.5초 후 재시도"
+    Start-Sleep -Milliseconds 1500
+    & $obs command id=graph:open 2>&1
+} else {
+    Write-Output $graphResult
+}
 
 Write-Output "OK · oh-my-wiki 셋업 완료"
 Write-Output "→ 옵시디언 GUI에서 일관성카드 + 그래프뷰 자동 열림 확인하세요"

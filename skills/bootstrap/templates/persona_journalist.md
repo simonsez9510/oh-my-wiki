@@ -37,7 +37,7 @@ tags: [취재/현장, 정치, 진행중]
 | `{persona}` | 매체운영자 |
 | `{who_label}` | 취재원·인터뷰이 |
 | `{topic_label}` | 이슈·테마 |
-| `{kind_examples}` | 기사·기획안·인터뷰메모·취재노트 |
+| `{kind_examples}` | 기사·기획안·인터뷰메모·취재노트·이슈브리프 |
 | `{folder_who}` | 취재원 |
 | `{folder_topic}` | 이슈 |
 | `{example_topic}` | 지방의회 AI 도입 |

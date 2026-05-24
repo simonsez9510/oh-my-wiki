@@ -11,9 +11,19 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$obs = "C:\Program Files\Obsidian\Obsidian.com"
-if (-not (Test-Path $obs)) {
-    Write-Output "FAIL: $obs 없음. healthcheck.ps1 먼저 실행"
+# Obsidian.com 리다이렉터 후보 — healthcheck.ps1과 동일 순서 유지
+$candidates = @(
+    "C:\Program Files\Obsidian\Obsidian.com",
+    "$env:LOCALAPPDATA\Programs\Obsidian\Obsidian.com",
+    "$env:LOCALAPPDATA\Obsidian\Obsidian.com"
+)
+$obs = $null
+foreach ($c in $candidates) {
+    if (Test-Path $c) { $obs = $c; break }
+}
+if (-not $obs) {
+    Write-Output "FAIL: Obsidian.com 리다이렉터 못 찾음 (healthcheck.ps1 먼저 실행)"
+    Write-Output "확인 자리: $($candidates -join ', ')"
     exit 1
 }
 

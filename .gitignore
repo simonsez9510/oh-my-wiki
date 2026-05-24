@@ -17,3 +17,7 @@ desktop.ini
 # Local test artifacts
 *.local.md
 _test_*/
+
+# Codex review brief·결과 (로컬 검증용, 공개 X)
+.codex_review_*.md
+.codex_review_*_result.md

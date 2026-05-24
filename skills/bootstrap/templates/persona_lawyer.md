@@ -38,7 +38,7 @@ tags: [의뢰인/법인, 노동, 진행중]
 | `{persona}` | 변호사 |
 | `{who_label}` | 의뢰인 |
 | `{topic_label}` | 쟁점·법령·판례 |
-| `{kind_examples}` | 자문의견서·소송서면·검토보고서·메모 |
+| `{kind_examples}` | 자문의견서·소송서면·검토보고서·메모·법령판례요약 |
 | `{folder_who}` | 의뢰인 |
 | `{folder_topic}` | 판례·법령 |
 | `{example_topic}` | 부당해고 (근로기준법 §23) |

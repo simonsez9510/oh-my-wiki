@@ -37,7 +37,7 @@ tags: [프로젝트/정책, AI, 진행중]
 | `{persona}` | 연구자 |
 | `{who_label}` | 프로젝트 |
 | `{topic_label}` | 개념·이론·방법론 |
-| `{kind_examples}` | 논문·보고서·정책브리프·발표·메모 |
+| `{kind_examples}` | 논문·보고서·정책브리프·발표·메모·개념정리 |
 | `{folder_who}` | 프로젝트 |
 | `{folder_topic}` | 개념 |
 | `{example_topic}` | 알고리즘 책임 |
